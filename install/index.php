@@ -11,11 +11,12 @@
   <div class="container">
   <div class="row">
   <div class="col-md-8 col-lg-7 mx-auto my-5">
+  <div class="alert alert-info"> Jika terjadi kegagalan saat proses menginstall, Silahkan laporkan kendala / error ke pengembang (Fajar Susilo) atau hubungi WA kami 085279213744 </div>
   
   <div id="error-message"></div>
   
   <div class="card shadow-lg border-0">
-  <div class="card-header"> Install SiloCMS v1.0 </div>
+  <div class="card-header"> Install Penulis v 1.4 </div>
   
   <div class="card-body">
   <form action="" id="form-install" method="POST">
