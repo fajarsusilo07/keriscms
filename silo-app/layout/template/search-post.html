@@ -1,0 +1,88 @@
+{{  include('template/header.html')  }}
+
+ {%  if post is empty  %}
+ <!-- Article Does't exits -->
+ <div class="container-fluid p-1">
+    <div class="row">
+       <div class="col-12 col-md-8">
+          <div class="alert alert-info"> Artikel <strong> <u> {{ keyword_search }} </u> </strong> yang anda cari tidak di temukan atau belum tersedia untuk saat ini.</div>
+          <div class="show-404 mb-3 mb-md-0"> <img src="/asset/img/404.jpeg" alt="" class="image"> <div class="content"> <a href="{{ site_url() }}" class="btn btn-light border"> Ke Beranda </a>  
+          </div> </div>
+          
+       </div>
+       <div class="col-md-4">
+       <div class="menu-article"> Artikel Populer </div>
+       
+       {%  for populer in populer_post %}
+       <div class="media-2">
+          <img src="{{ populer.thumbnail }}" alt="{{ populer.title }}" width="120" height="80" class="mr-3">
+          <div class="media-body-2"> <a href="{{ populer.permalink }}">{{ populer.title }}</a>
+          <div class="media-body-meta"> {{ populer.update|date('d M, Y', timezone='Asia/Jakarta') }}</div></div>
+       </div>
+       {%  endfor  %}
+       
+       </div>
+    </div>
+ </div>
+  
+ {%   else  %}
+  <div class="container">
+     
+    <div class="row">
+       
+       <div class="col-12">
+          
+ <div class="alert alert-info"> Menampilkan {{ count }} artikel tentang {{ keyword_search }} </div> 
+ 
+ <div class="row">
+
+ {%  for list in post  %}
+ <div class="col-md-6">  
+ <div class="card post-list">
+
+ <img src="{{ list.thumbnail }}" alt="image for this article {{ list.title }}" class="card-img-top">
+ 
+ <div class="card-body">
+    <div class="title">  <a href="{{ list.permalink }}" title="{{ list.title }} - {{ site_name }}">  {{ list.title }} </a>
+     
+     </div>
+     
+     <div class="post-info text-muted"> <i class="fas fa-user mr-2"></i><a href="/page/about"> {{ list.post_by }} </a> , pada {{ list.update|date('d M, Y') }} </div>
+     
+     
+     <div class="post-label"> {% for category in list.category %}  
+     <a href="{{ category.permalink }}" class="badge badge-light"> {{ category.name }} </a>   {% endfor %}
+     
+     </div>
+     
+     <div class="content">
+        
+         {{ list.summary }}   
+                         
+                         {% if list.summary|length == 240 %}
+                         
+                         <div class="read-more"> <a href="{{ list.permalink }}">Read More</a> </div>
+                         
+                    {%    endif    %}
+                    </div>
+     
+          </div>
+               </div>
+                   </div>
+   
+   {%     endfor     %}
+   
+   </div>
+   
+   <!-- Pagination -->
+   {{   pagination|raw   }}
+   
+   
+   </div>
+      </div>
+          </div>
+           
+   {%  endif  %}
+ 
+              
+     {{  include('template/footer.html')  }}

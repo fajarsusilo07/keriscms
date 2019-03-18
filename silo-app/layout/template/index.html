@@ -1,0 +1,54 @@
+{{  include('template/header.html')  }}
+
+<div class="container">  <div class="row">   
+ 
+ <div class="col-12">  
+ 
+ <div class="row">
+
+ {%  for list in post  %}
+ <div class="col-md-6">  
+ <div class="card post-list">
+
+ <img src="{{ list.thumbnail }}" alt="image for this article {{ list.title }}" class="card-img-top img-thumbnail">
+ 
+ <div class="card-body">
+    <div class="title">  <a href="{{ list.permalink }}" title="{{ list.title }} - {{ site_name }}">  {{ list.title }} </a>
+     
+     </div>
+     
+     <div class="post-info text-muted"> <i class="fas fa-user mr-1"></i> <a href="/page/about"> {{ list.post_by }} </a> , pada {{ list.update|date('d M, Y') }} </div>
+     
+     
+     <div class="post-label"> {% for category in list.category %}  
+     <a href="{{ category.permalink }}" class="badge badge-light border"> {{ category.name }} </a>   {% endfor %}
+     
+     </div>
+     
+     <div class="content">
+        
+         {{ list.summary }}   
+                         
+                         {% if list.summary|length == 240 %}
+                         
+                         <div class="read-more"> <a href="{{ list.permalink }}">Read More</a> </div>
+                         
+                    {%    endif    %}
+                    </div>
+     
+          </div>
+               </div>
+                   </div>
+   
+   {%     endfor     %}
+   
+   </div>
+   
+   <!-- Pagination -->
+   {{   pagination|raw   }}
+ 
+ </div>
+      </div>
+           </div>
+              
+     {{  include('template/footer.html')  }}

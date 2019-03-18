@@ -1,0 +1,139 @@
+ <!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/asset/vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="/asset/css/style.css">
+  <!-- Style fontawesome for Icon -->
+  <link rel="stylesheet" href="/asset/vendor/fontawesome-free/css/all.min.css">
+  
+  <!-- Jquery Library -->
+  <script type="text/javascript" src="/asset/vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap javascript -->
+  <script type="text/javascript" src="/asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
+  {% if page == 'index' %}
+  
+  <title>  {{ site_name }}   </title>
+  
+  <meta name="description" content="{{ site_description }}">
+     
+  {%  elseif page == 'view-post'  %}
+  
+  <title> {{ title }} - {{ site_name }} 
+ </title>
+ 
+  <meta name="description" content="{{ description }}">
+ 
+ <!-- Open Graph -->
+ <meta property="og:url" content="{{ current_url() }}">
+ <meta property="og:title" content="{{ title }} - {{ site_name }}">
+ <meta property="og:description" content="{{ cut_string(post.content, 160) }}">
+ <meta property="og:image" content="{{ post.thumbnail }}">
+     
+  {%  elseif page == 'search'  %}
+  
+  <title> {{ site_name }} - Menampilkan artikel {{ keyword_search }}  </title>
+  
+  <meta name="description" content="{{ site_description }}">
+     
+  <meta name="robots" content="noindex,nofollow">
+     
+  {%  elseif page == 'category' %}
+  
+  <title> {{ site_name }} - Semua artikel tentang '{{ category_name }}' </title>
+  
+  <meta name="robots" content="index, follow">
+  
+  {%   elseif page == 'pagination'   %}
+  
+  <title> {{ site_name }} - Semua Halaman </title>
+  
+  <meta name="description" content="{{ site_description }}">
+  
+  <meta name="robots" content="noindex,nofollow">
+  
+  {%  elseif page == '404'  %}
+  
+  <title> Page 404 Not Found - {{ site_name }} </title>
+  
+  <meta name="description" content="{{ site_description }}">
+     
+  <meta name="robots" content="noindex,nofollow">
+  
+  {%  elseif page == 'view-page'  %}
+  
+  <title> {{ pages.name }} - {{ site_name }} </title>
+  
+  <meta name="description" content="{{ pages.summary }}">
+  
+  {%   endif   %}
+  
+  <meta name="keywords" content="{{ site_keywords }}">
+    
+  </head>
+  <body>
+  
+  
+ <nav class="navbar navbar-expand-md fixed-top navbar-dark navbar-color">
+  <a class="navbar-brand mr-auto" href="{{ site_url() }}"> {{ site_name }} </a>
+  <button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto mr-md-3">
+ 
+      <li class="nav-item active">
+      
+        <a class="nav-link" href="{{ site_url() }}"> Beranda <span class="sr-only">(current)</span></a>
+      </li>
+     
+      <li class="nav-item">
+      <a class="nav-link" href="/pages/view/about" rel="nofollow"> Tentang </a>
+      </li>
+      
+      <li class="nav-item">
+      <a class="nav-link" href="/pages/view/privasi" rel="nofollow"> Privasi & Policy </a>
+      </li>
+      
+      
+      <li class="nav-item">
+      <a class="nav-link" href="/sitemap.txt" rel="nofollow"> Sitemap </a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-3 my-md-0 ml-auto" action="/search">
+    
+      <input name="q" class="form-control border-0 form-control-sm" type="text" placeholder="Search" aria-label="Search">
+      
+      <button class="btn btn-light btn-sm my-2 my-sm-0 border-none ml-md-1" type="submit"><i class="fas fa-search"> Search</i> </button>
+    </form>
+  </div>
+</nav>
+
+<div class="nav-scroller shadow-sm">
+  <nav class="nav nav-underline">
+  
+    <a class="nav-link" href="{{ site_url() }}"> Beranda </a>
+    
+    {%  for label in list_category %}
+        
+    {%  if category_name == label.name %}
+    <a class="nav-link text-blue" href="{{ label.permalink }}"> {{ label.name }}  </a>
+    
+    {%  else  %}
+    
+    <a class="nav-link" href="{{ label.permalink }}"> {{ label.name }}  </a>
+    {%    endif    %} 
+    {%    endfor   %}
+    
+  </nav>
+</div>
+
+ 
+ <div class="margin-top"></div>

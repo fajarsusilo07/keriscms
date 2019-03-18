@@ -1,0 +1,84 @@
+ {{ include('template/header.html') }}
+ 
+ <div class="container-fluid p-0 p-md-1">
+ <div class="row"> <div class="col-12 col-md-8">  
+              
+ <div class="post-view">    
+         
+ <div class="title"> <a href="{{ post.permalink }}"> {{ post.title }} </a> </div>
+
+ <div class="sharer"> 
+ 
+ <a rel="nofollow" href="https://facebook.com/sharer.php?u={{ current_url() }}" class="sharer-facebook"> <i class="fab fa-facebook"></i> </a>
+ 
+ <a rel="nofollow" href="whatsapp://send?text={{ current_url() }}" class="sharer-whatsapp"> <i class="fab fa-whatsapp"></i></a>
+ 
+ <a rel="nofollow" href="https://twitter.com/share?url={{ current_url() }}" class="sharer-twitter"><i class="fab fa-twitter"></i></a>
+ 
+ <a rel="nofollow" href="http://pinterest.com/pin/create/button/?url={{ current_url() }}" class="sharer-pinterest"><i class="fab fa-pinterest"></i> </a>
+ </div>
+ 
+
+ <div class="clearfix"></div>
+ 
+  {% if post.date != post.update  %}
+ <div class="post-info text-muted"> <i class="fas fa-user"></i> <a href="http://facebook.com/fajar.susilo.904" rel="nofollow"> {{ post.post_by }} </a>, terakhir di perbaharui pada {{ post.update|date('d M, Y', timezone = 'Asia/Jakarta') }}, di baca {{ post.hits }} kali </div>
+ {%  else  %}
+  <div class="post-info text-muted"> <i class="fas fa-user"></i> <a href="http://facebook.com/fajar.susilo.904" rel="nofollow"> {{ post.post_by }} </a>, pada {{ post.update|date('d M, Y', timezone = 'Asia/Jakarta') }}, di baca {{ post.hits }} kali </div>
+  {%  endif  %}
+ 
+ <div class="post-label"> 
+ 
+      {% for label in post.category %} 
+      
+      <a href="{{ label.permalink }}" class="badge badge-light"> {{ label.name }}  </a> 
+      
+      {%  endfor  %}
+    
+    </div>
+    
+    <div class="content"> {{ post.content|raw }}
+    
+    </div>
+   
+  </div>
+  
+  
+  <div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=1693246464108417&autoLogAppEvents=1'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+  
+  <div class="fb-comments" data-href="{{ current_url() }}" data-width="100%" data-numposts="10" data-mobile="true"></div>
+  
+  </div>
+  
+  <div class="col-md-4">
+
+  <div class="menu-article"> Artikel terkait </div>
+  
+  {% if relatedPost != "" %}
+ 
+  {% for related in relatedPost %}
+  
+  <div class="media-2"><img src="{{ related.thumbnail }}" alt="{{ related.title }}" class="mr-3"> <div class="media-body-2"> <a href="{{ related.permalink }}"> {{ related.title }} </a>
+  <div class="media-body-meta"> {{ related.date|date('d M, Y') }} </div> </div> </div>
+  
+  {%  endfor  %} {%  endif  %}
+ 
+     
+     <div class="menu-article my-2"> Artikel Populer </div>
+  
+  {% for list in populer_post %}
+  
+  <div class="media-2"> <img src="{{ list.thumbnail }}" alt="{{ list.title }}" width="120" height="80" class="mr-3"> 
+  <div class="media-body-2"> <a href="{{ list.permalink }}"> {{ list.title }}  </a> <div class="media-body-meta"> {{ list.update|date('d M, Y', timezone='Asia/Jakarta') }}</div></div> </div>
+  
+  {% endfor %}
+  
+ 
+  </div>
+    
+     </div>  
+     
+         </div>
+ 
+  
+ {{ include('template/footer.html') }}

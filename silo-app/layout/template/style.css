@@ -1,0 +1,402 @@
+/****
+ * Author Fajar Susilo
+ * Theme Version 1.1
+ * Theme takbernama v2
+ * Email silophp@gmail.com
+ * Facebook http://facebook.com/fajar.susilo.904
+ */
+
+ html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  padding-top: 56px;
+  font-family : 'Times New Roman', serif;
+  background: #fff;
+  font-size: 14px;
+}
+
+a, a:hover, a:active {
+   color: #00838F;
+   text-decoration: none;
+}
+.underline {
+  font-style: underline;
+}
+.margin-top {
+   margin-top: 15px;
+}
+ 
+ /* Style for footer */
+ 
+#myFooter{
+    padding-top:32px;
+}
+
+#myFooter .container{
+    text-align: center;
+}
+
+#myFooter .footer-copyright{
+    margin-bottom: 35px;
+    text-align: center;
+    color: #777;
+}
+
+#myFooter ul{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 18px;
+}
+
+#myFooter a{
+    color: #eee;
+    font-size: 18px;
+}
+
+#myFooter li{
+    display: inline-block;
+    margin: 0px 15px;
+    line-height: 2;
+    font-family: sans-serif;
+}
+
+#myFooter .footer-social{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#myFooter .fab {
+    font-size: 36px;
+    margin-right: 15px;
+    margin-left: 20px;
+    background-color: white;
+    color: #d0d0d0;
+    border-radius: 51%;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 43px;
+    text-decoration: none;
+    transition:color 0.2s;
+    border: 1px solid #ddd;
+}
+
+#myFooter .fa-facebook {
+   color: #2b55ff;
+}
+
+#myFooter .fa-facebook:focus{
+    color: #2b55ff; 
+}
+
+#myFooter .fa-whatsapp {
+    color:green;
+}
+
+#myFooter .fa-whatsapp:focus{
+    color:green;
+}
+
+#myFooter .fa-telegram {
+    color: #2196F3;
+
+}
+
+#myFooter .fa-telegram:focus{
+    color: #2196F3;
+}
+
+ /*  Styles for list post  */
+ .post-list {
+    margin-bottom: 5px;
+ }
+ .post-list .title  {
+    font-size: .9rem;
+    font-family: serif;
+    text-transform: capitalize;
+    line-height: 1.2rem;
+ }
+ 
+ .post-list .post-info {
+    margin-top: 10px;
+    font-size: x-small;
+    margin-left: 5px;
+ }
+ .post-list .post-info a {
+    font-weight : normal;
+ }
+ 
+ .post-list .post-label {
+    margin-top: 5px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 5px;
+    font-size: small;
+    font-family: sans-serif;
+ }
+ .post-list .content {
+    margin-top: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: small;
+ }
+ .post-list .content .read-more {
+    float: right;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 25px;
+ }
+ .post-list .content .read-more a {  color: #212529;  }
+ 
+ 
+ /*  Styles for view post   */
+ 
+@media (max-width: 767px){
+  .post-view {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 768px){
+  .post-view {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+   }
+}
+.post-view .sharer {
+     margin-top: 10px;
+     padding-left: 5px;
+ }
+ .post-view .sharer a {
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+ }
+ .post-view .sharer a.sharer-whatsapp {
+    color: white;
+    background: green;
+ }
+ .post-view .sharer a.sharer-facebook {
+    color: white;
+    background: #3b5998;
+ }
+ .post-view .sharer a.sharer-twitter {
+    color: white;
+    background: #55acee;
+ }
+ .post-view .sharer a.sharer-pinterest {
+    background: #cb2027;
+    color: white;
+ }
+ .post-view .sharer .sharer-whatsapp, .post-view .sharer .sharer-facebook, .post-view .sharer .sharer-twitter,.post-view .sharer .sharer-pinterest  {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    font-size: large;
+ }
+ .post-view .title a {
+   color: #128F97;
+ }
+ .post-view .title {
+     margin-bottom: 5px;
+     font-weight: bold;
+     text-transform: capitalize;
+     font-size: large;
+     padding-left: 5px;
+     font-family : sans-serif;
+     line-height: 1.5rem;
+     text-align: left;
+ }
+ .post-view .post-label a {
+  color: #212529;
+ }
+ .post-view .post-label {
+     margin-bottom: 5px;
+     padding-left: 10px;
+     padding-top: 5px;
+     padding-bottom: 10px;
+     font-size: small;
+     border-bottom: 2px solid #ddd;
+ }
+ .post-view .content {
+   font-family: 'Times New Roman', sans-serif;
+   font-weight: normal;
+   font-size: small;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   margin-bottom: 5px;
+   margin-top: 5px;
+ }
+ .post-view .content img {
+    max-width: 100%;
+    height: auto;
+ }
+ 
+ .post-view .post-info {
+      margin-top: 10px;
+      padding-top: 2px;
+      font-size: x-small;
+      padding-left: 12px;
+ }
+ 
+ /* Style for page 404  */
+ 
+ .show-404  {
+     background-color: #fff;
+ }
+ .show-404 .image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+ }
+ .show-404 .content {
+    padding-top: 5px;
+    font-family: serif;
+    padding-bottom: 5px;
+ }
+ 
+ /* custom media object  */
+ .media-2 {
+   display: -ms-flexbox; display: flex; -ms-flex-align: start; align-items: flex-start;
+   background: white; border-bottom: 1px solid #ccc;
+   padding: 6px;
+   } 
+ .media-2 img { width: 120px !important; height: 80px !important; padding: 0.25rem; background-color: #fff; border: 1px solid #dee2e6; border-radius: 0.25rem; }
+ .media-body-2 { 
+    -ms-flex: 1; 
+     flex: 1;
+     line-height: 1.3rem;
+  }
+ .media-body-2 a {
+     text-transform: capitalize;
+     font-family : sans-serif;
+  }
+ .media-body-meta {
+    line-height: 1em;
+    margin-top: 2px;
+    font-size: small;
+ }
+ 
+.menu-article {
+     font-family : sans-serif;
+     font-size: large;
+     font-weight: bold;
+     padding: 10px 5px 10px 10px;
+     color: #212529;
+     border-radius: none;
+     border: none;
+     background: #fafafa;
+     border-bottom: 1px solid #00b8d4;
+}
+   .label-count { float:right; background: #00b8d4; padding-left: 3px; padding-right: 3px; padding-top: 3px; border-radius: 3px; color: white; font-size: small; font-family: sans-serif; padding-bottom: 1px; }
+@media(min-width: 768px){
+   .menu-article { background: #00b8d4; color: white; border-bottom: none; border-radius: 3px; margin-bottom: 5px; }
+   .label-count { display: none; }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+  background: #fafafa;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #dc3545;
+}
+
+.nav-underline .active {
+  font-weight: normal;
+  color: #dc3545;
+}
+
+.text-white-50 { color: rgba(255, 255, 255, .5); }
+
+.bg-purple { background-color: #6f42c1; }
+
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
+
+/* Style For Label */
+/* mobile */
+ @media (max-width: 767px) {
+ .label ul > li {
+   background: white;
+   border-bottom: 1px solid #ccc;
+   padding: 8px;
+   margin-right: 10px;
+   list-style-type: circle;
+ }
+ }
+ /* tablet < , style display inline block */
+ @media (min-width: 768px) {
+    
+ .label {
+    margin-left: -20px;
+    font-size: small;
+ }
+ 
+ .label ul > li {
+    background: #fff;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px 9px 5px 9px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    list-style-type: none; 
+ }
+ .label ul > li:before {
+    content: '#';
+ }
+ }
+ /* Style for list-menu */
+ .list-menu ul > li {
+   background: white;
+   border-bottom: 1px solid #ccc;
+   padding: 8px;
+   margin-right: 10px;
+   list-style-type: circle;
+ }
+ 
+ /* BG Color */
+ .bg-light-blue {
+    background: #03A9F4; !important;
+ }
+ .navbar-color { background: #00b8d4; }
+ .text-blue { color: #00b8d4; }
+ .text-blue { color: #00b8d4; }

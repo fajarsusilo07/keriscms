@@ -1,0 +1,36 @@
+ {{  include('template/header.html'  )}}
+ 
+ <div class="container-fluid p-1">
+    
+    <div class="row">
+       
+       <div class="col-md-8">
+          
+          <div class="show-404">
+             <img src="/asset/img/404.jpeg" alt="404 Page Not Found" class="image">
+                <div class="content mb-3">
+                    Halaman yang anda cari tidak di temukan atau tidak tersedia untuk saat ini. 
+                <br> <a href="{{ site_url() }}" class="btn btn-light border mt-2"> Ke Beranda </a> 
+                
+                </div>
+             
+               </div>
+          
+          
+       </div>
+       <div class="col-md-4">
+       <div class="menu-article"> Artikel Terpupuler  </div>
+       {% for populer in populer_post %}
+       
+       <div class="media-2">
+          <img src="{{ populer.thumbnail }}" alt="{{ populer.title }}" width="120" height="80" class="mr-3"> <div class="media-body-2"> <a href="{{ populer.permalink }}"> {{ populer.title }} </a> 
+          <div class="media-body-meta"> {{ populer.update|date('d M, Y', timezone='Asia/Jakarta') }} </div>  </div>
+       </div>
+       {%  endfor %}
+       
+        </div>
+    </div>
+ </div>
+ 
+ 
+ {{  include('template/footer.html')   }}

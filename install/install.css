@@ -1,0 +1,26 @@
+body {  
+   background: #ddd;
+   font-size: 1rem;
+   }
+   
+ .form-group label {
+    font-size: small;
+ }
+ .form-group .form-control {
+    background: #eee;
+    font-family: monospace;
+    font-size: small;
+ }
+ .card .card-header {
+    background: #bb0000;
+    color: white;
+ }
+ .card .btn-install {
+    background: #bb0000;
+    color: white;
+ }
+
+.text-danger {
+   font-size: small;
+   
+}

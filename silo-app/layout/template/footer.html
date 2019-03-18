@@ -1,0 +1,55 @@
+<div class="container-fluid p-0 p-md-1">     
+<div class="row"> <div class="col-12 col-md-6 my-2">  
+    
+      <div class="menu-article"> Artikel Terbaru </div>
+     
+     {%   for latest in latest_post  %}
+     
+      <div class="media-2"> <img src="{{ latest.thumbnail }}" alt="{{ latest.title }}" width="120" height="80" class="mr-3 img-thumbnail">  <div class="media-body-2"> <a href="{{ latest.permalink }}"> {{ latest.title }} </a>  <div class="media-body-meta"> {{ latest.date|date('d M, Y', timezone = 'Asia/Jakarta') }} </div> </div> </div>
+      
+      {%   endfor   %}
+     
+    </div>
+    <div class="col-md-6 my-2"> <div class="menu-article"> Label </div>
+    
+    <div class="label">
+       <ul>
+       {%  for label in list_category %}
+       <li> <a href="{{ label.permalink }}"> {{ label.name }} </a> <span class="label-count"> {{ label.post }} </span>
+        </li>
+        {%  endfor  %}
+        
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="menu-article mt-md-3"> Partner </div>
+    
+    <div class="list-menu">
+       <ul> <li> <a href="http://silotekno.bloger.id"> SiloTekno.bloger.ID </a> </li> </ul>
+    </div>
+    </div>
+         </div>
+               </div>
+               
+               
+               <div class="content">
+</div>
+    <footer id="myFooter" class="bg-dark mt-5">
+        <div class="container">
+            <ul>
+                <li><a href="/pages/view/about" rel="nofollow"> About Us </a></li>
+                <li><a href="https://wa.me/6285279213744" rel="nofollow">Contact us</a></li>
+                <li><a href="https://facebook.com/fajar.susilo.904" rel="nofollow"> Author </a></li>
+                <li><a href="/pages/view/terms-of-service" rel="nofollow">Terms of service</a></li>
+            </ul>
+        <p class="footer-copyright">© {{ 'now'|date('Y') }} {{ site_name }} </p>
+        </div>
+        <div class="footer-social bg-light">
+            <a href="http://facebook.com" rel="nofollow" class="social-icons"><i class="fab fa-facebook"></i></a>
+            <a href="#" rel="nofollow" class="social-icons"><i class="fab fa-telegram"></i></a>
+            <a href="#" rel="nofollow" class="social-icons"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

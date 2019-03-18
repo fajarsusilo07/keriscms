@@ -1,0 +1,53 @@
+ {{ include('template/header.html') }}
+ 
+ <div class="container-fluid p-0 p-md-1">
+ <div class="row"> <div class="col-12 col-md-8">  
+              
+ <div class="post-view">    
+         
+ <div class="title"> <a href="{{ pages.permalink }}"> {{ pages.name }} </a> </div>
+
+ <div class="sharer"> 
+ 
+ <a rel="nofollow" href="https://facebook.com/sharer.php?u={{ current_url() }}" class="sharer-facebook"> <i class="fab fa-facebook"></i> </a>
+ 
+ <a rel="nofollow" href="whatsapp://send?text={{ current_url() }}" class="sharer-whatsapp"> <i class="fab fa-whatsapp"></i></a>
+ 
+ <a rel="nofollow" href="https://twitter.com/share?url={{ current_url() }}" class="sharer-twitter"><i class="fab fa-twitter"></i></a>
+ 
+ <a rel="nofollow" href="http://pinterest.com/pin/create/button/?url={{ current_url() }}" class="sharer-pinterest"><i class="fab fa-pinterest"></i> </a>
+ </div>
+ 
+
+ <div class="clearfix"></div>
+
+  <div class="post-info text-muted"> <i class="fas fa-user"></i> <a href="{{ site_url() }}" rel="nofollow"> SiloPedia </a>, pada {{ pages.date|date('d M, Y', timezone = 'Asia/Jakarta') }} </div>
+
+    <div class="content"> {{ pages.content|raw }}
+    
+    </div>
+   
+  </div>
+  
+  </div>
+  
+  <div class="col-md-4">
+     
+     <div class="menu-article"> Artikel Populer </div>
+  
+  {% for list in populer_post %}
+  
+  <div class="media-2"> <img src="{{ list.thumbnail }}" alt="{{ list.title }}" width="120" height="80" class="mr-3"> 
+  <div class="media-body-2"> <a href="{{ list.permalink }}"> {{ list.title }}  </a> <div class="media-body-meta"> {{ list.update|date('d M, Y', timezone='Asia/Jakarta') }}</div></div> </div>
+  
+  {% endfor %}
+  
+ 
+  </div>
+    
+     </div>  
+     
+         </div>
+ 
+  
+ {{ include('template/footer.html') }}

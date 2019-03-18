@@ -1,0 +1,14 @@
+# Silocms blogger is a cms simple however quick which written using the php framework namely codeigniter with complete features such as :
+# Add Post, Edit Post, Delete Post
+# Add Category, Edit Category, Delete Category
+# Upload File, Delete File, Rename File
+# Add Page, Edit Page, Delete Page
+# Template Editor
+# Change Permalink Post and more
+
+# Changelog ---
+#1.0 - Release - 13 Feb 2019
+#1.1 - Bug Fixed Textarea Post Error, Input Permalink Category - 14 Feb 2019
+#1.2 - Added Template Editor With Twig  Engine - 16 Feb 2019
+#1.3 - Added Backup Template - 25 Feb 2019
+#1.4 - Added Upload Template - 26 Feb 2019
