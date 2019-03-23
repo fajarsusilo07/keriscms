@@ -311,7 +311,7 @@ switch (ENVIRONMENT)
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
 	
 	// define CMS VERSION
-	define('CMS_VERSION', 1.4);
+	define('CMS_VERSION', 1.5);
 	// define CMS AUTHOR
 	define('CMS_AUTHOR', 'Fajar Susilo');
 	// define CMS NAME
