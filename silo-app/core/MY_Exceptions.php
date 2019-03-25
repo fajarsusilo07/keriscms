@@ -43,13 +43,12 @@
 		
 		     $data['page'] = 404;
 		    // set status header
-         $CI->output->set_status_header(404);
+        $this->output->set_status_header(404);
         
 		// include 404 file
-	echo $CI->twig->display('template/404',$data, TRUE);
-	
-	echo $CI->output->get_output();
-		exit(4); // EXIT_UNKNOWN_FILE	
+     echo $CI->twig->display('template/404.html',$data, TRUE);
+	   echo $CI->output->get_output();
+	   exit(4); // EXIT_UNKNOWN_FILE	
 
        
     }

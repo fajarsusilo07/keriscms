@@ -53,4 +53,17 @@
         
         </a>
         </li>
+        <li class="nav-item">
+        
+        <a class="nav-link" href="/admin/backup"> <i class="fas fa-fw fa-file-export"></i> 
+        <span> Backup </span>
+        
+        </a>
+        </li>
+         <li class="nav-item ">
+          <a class="nav-link" href="/admin/update">
+            <i class="fas fa-fw fa-bolt"></i>
+            <span> Update </span>
+          </a>
+        </li>
       </ul>

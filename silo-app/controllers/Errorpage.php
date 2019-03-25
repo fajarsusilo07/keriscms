@@ -8,7 +8,7 @@
      }
      
      public function nofound(){
-        
+     	  $this->output->set_status_header(404);
         $data['page'] = '404';
         $this->twig->display('template/404',$data);
         

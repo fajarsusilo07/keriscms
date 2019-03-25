@@ -25,7 +25,7 @@
         
         $action = strtolower($this->input->post('action', TRUE));
         $backup = $this->input->post('backup', TRUE);
-       // print_r($this->input->post()); exit;
+       
        if ($backup == "yes")
        {
           if ($action == "archive")
