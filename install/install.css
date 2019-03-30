@@ -1,5 +1,9 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
 body {  
-   background: #ddd;
+   background: #fff;
    font-size: 1rem;
    }
    
@@ -12,15 +16,32 @@ body {
     font-size: small;
  }
  .card .card-header {
-    background: #bb0000;
+    background: #6078B0;
     color: white;
  }
  .card .btn-install {
-    background: #bb0000;
+    background: #6078B0;
     color: white;
+    font-size: large;
  }
 
-.text-danger {
+.text-error {
    font-size: small;
+   font-family: 'Times New Roman', serif;
+   color: #6078B0;
    
+}
+.alert-info {
+	background: #FAFAFA;
+	border: 1px solid #6078B0;
+	color: #6078B0;
+}
+.alert-danger {
+	border: none;
+}
+.form-group .form-control:focus {
+	box-shadow: none;
+	border: 1px solid #6078B0;
+	background: #fff;
+	font-family: 'Times New Roman', serif;
 }
