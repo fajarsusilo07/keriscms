@@ -90,14 +90,14 @@
         }
         else
         {
-           echo json_encode(array('status' => 'dberror', 'message' => $silo->db_error()));
+           echo json_encode(array('status' => 'failure', 'message' => $silo->db_error()));
            exit;
         }
                
       }
       else
       {
-         echo json_encode(array('status' => 'dberror', 'message' => $silo->db_error()));
+         echo json_encode(array('status' => 'failure', 'message' => $silo->db_error()));
          exit;
       }
    } 
