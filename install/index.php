@@ -8,15 +8,17 @@
   $title = 'Installation - SiloCMS ';
   require_once(__DIR__.'/header.php'); ?>
   
-  <div class="container">
+  <div class="container p-1">
   <div class="row">
-  <div class="col-md-8 col-lg-7 mx-auto my-5">
-  <div class="alert alert-info"> Jika terjadi kegagalan saat proses menginstall, Silahkan laporkan kendala / error ke pengembang (Fajar Susilo) atau hubungi WA kami 085279213744 </div>
+  <div class="col-md-10 col-lg-10 mx-auto my-3">
+  <div class="alert alert-info"> Welcome to PenulisCMS
+this is the page installation for the PenulisCMS
+ </div> 
   
   <div id="error-message"></div>
   
   <div class="card shadow-lg border-0">
-  <div class="card-header"> Install Penulis v 1.4 </div>
+  <div class="card-header"> fill in all the form below with the correct </div>
   
   <div class="card-body">
   <form action="" id="form-install" method="POST">
@@ -24,7 +26,7 @@
      <label for="host"> Host </label>
      <input type="text" name="host" class="form-control form-control-lg" value="" id="host">
      
-     <div id="m-dbhost" class="form-text text-danger"></div>
+     <div id="m-dbhost" class="form-text text-error"></div>
      
      </div>
      
@@ -32,7 +34,7 @@
      <label for="dbname"> Nama database </label>
      <input type="text" name="dbname" class="form-control form-control-lg" value="" id="dbname">
      
-     <div id="m-dbname" class="form-text text-danger"></div>
+     <div id="m-dbname" class="form-text text-error"></div>
      
      </div>
      
@@ -40,7 +42,7 @@
      <label for="dbuser"> Database pengguna </label>
      <input type="text" name="dbuser" class="form-control form-control-lg" value="" id="dbuser">
      
-     <div id="m-dbuser" class="form-text text-danger"></div>
+     <div id="m-dbuser" class="form-text text-error"></div>
      
      </div>
      
@@ -48,7 +50,7 @@
      <label for="dbpw"> Password database </label>
      <input type="text" name="dbpass" class="form-control form-control-lg" value="" id="dbpw">
      
-     <div id="m-dbpass" class="form-text text-danger"></div>
+     <div id="m-dbpass" class="form-text text-error"></div>
      
      </div>
      
@@ -56,7 +58,7 @@
      <label for="fullname"> Nama lengkap </label>
      <input type="text" name="fullname" class="form-control form-control-lg" value="" id="fullname">
      
-     <div id="m-fullname" class="form-text text-danger"></div>
+     <div id="m-fullname" class="form-text text-error"></div>
      
      </div>
   
@@ -65,14 +67,14 @@
      <label for="username"> Nama pengguna </label>
      <input type="text" name="username" class="form-control form-control-lg" value="" id="username">
      
-     <div id="m-username" class="form-text text-danger"></div>
+     <div id="m-username" class="form-text text-error"></div>
      
      </div>
       <div class="form-group">
      <label for="email"> Email </label>
      <input type="text" name="email" class="form-control form-control-lg" value="" id="email">
      
-     <div id="m-email" class="form-text text-danger"></div>
+     <div id="m-email" class="form-text text-error"></div>
      
      </div>
      
@@ -80,7 +82,7 @@
      <label for="password"> Password </label>
      <input type="text" name="password" class="form-control form-control-lg" value="" id="password">
      
-     <div id="m-password" class="form-text text-danger"></div>
+     <div id="m-password" class="form-text text-error"></div>
      
      </div>
      
