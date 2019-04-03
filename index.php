@@ -315,7 +315,7 @@ switch (ENVIRONMENT)
 	// define CMS AUTHOR
 	define('CMS_AUTHOR', 'Fajar Susilo');
 	// define CMS NAME
-	define('CMS_NAME', 'SiloCMS Blogger');
+	define('CMS_NAME', 'PenulisCMS');
 
 /*
  * --------------------------------------------------------------------

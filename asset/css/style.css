@@ -231,7 +231,7 @@ a, a:hover, a:active {
  .post-view .content {
    font-family: 'Times New Roman', sans-serif;
    font-weight: normal;
-   font-size: small;
+   font-size: 15px;
    padding-bottom: 5px;
    padding-top: 5px;
    margin-bottom: 5px;
